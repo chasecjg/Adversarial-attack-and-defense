@@ -84,6 +84,7 @@
 |---------------------------------------------------------------------------------------------|---------|------|----------------------------------------------------------------|---------------------------------------------|
 | Perturbation Inactivation Based Adversarial Defense for Face Recognition                    | TIFS    | 2022 | [paper](https://ieeexplore.ieee.org/abstract/document/9845464) | [code](https://github.com/AmIAttribute/AmI) |
 | A Random-patch based Defense Strategy Against Physical Attacks for Face Recognition Systems | \       | 2023 | [paper](https://arxiv.org/abs/2304.07822)                      | \                                           |
+| Detecting Adversarial Faces Using Only Real Face Self-Perturbations                         | IJCAI   | 2023 | [paper](https://arxiv.org/pdf/2304.11359v2.pdf)                | [code](https://github.com/cc13qq/sapd)      |
 
 
 
