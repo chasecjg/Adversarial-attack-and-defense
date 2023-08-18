@@ -1,8 +1,10 @@
+[[_TOC_]]
+
 # 一. 人脸识别
 
 人脸识别是一种通过分析人脸图像特征进行身份识别的一种方法。
 
-**一般流程：**
+* 一般流程
 
 人脸检测->人脸对齐->特征提取->人脸分类
 
@@ -36,7 +38,7 @@
 
 ## 1.3. 常用损失
 
-可以分为以下两类：
+* 两类：
 1. 基于Euclid Distance的损失函数（Contrastive Loss、Triplet Loss、Center Loss等)
 2. 基于Angular Margin相关的损失函数（L-Softmax Loss、A-Softmax Loss、CosFace Loss、ArcFace Loss等）。
 
@@ -70,32 +72,36 @@
 
 * 防御
 
-主要分为三种：去噪，滤除，检测
+1. 主要分为三种：去噪，滤除，检测
 
-主要关注：物理攻击+黑盒攻击+非目标攻击
+2. 主要关注：物理攻击+黑盒攻击+非目标攻击
 
 
-# 2.1. 常用攻击
+## 2.1. 主流攻击方法
 
 这里主要列举一些物理攻击方法，如帽子攻击，眼镜攻击，眼影攻击，贴纸攻击等
 
 | Name                                                                                   | Publish  | Year | Paper                                                                        | Code                                                   |
 |----------------------------------------------------------------------------------------|----------|------|------------------------------------------------------------------------------|--------------------------------------------------------|
-| Accessorize to a crime: Real and stealthy attacks on state-of-the-art face recognition | CCS      | 2016 | [paper](https://users.cs.northwestern.edu/~srutib/papers/face-rec-ccs16.pdf) | \                                                      |
+| Accessorize to a crime: Real and stealthy attacks on state-of-the-art face recognition | CCS      | 2016 | [paper](https://users.cs.northwestern.edu/~srutib/papers/face-rec-ccs16.pdf) | [code](https://github.com/mahmoods01/accessorize-to-a-crime)                                                      |
 | AdvHat: Real-world adversarial attack on ArcFace Face ID system                        | ICPR        | 2019 | [paper](https://arxiv.org/pdf/1908.08705v1.pdf)                              | [code](https://github.com/papermsucode/advhat)         |
 | Efficient Decision-based Black-box Adversarial Attacks on Face Recognition             | CVPR     | 2019 | [paper](https://arxiv.org/pdf/1904.04433v1.pdf)                              | [code](https://github.com/SCLBD/BlackboxBench)         |
 | On adversarial patches: real-world attack on ArcFace-100 face recognition system       | SIBIRCON | 2019 | [paper](https://ieeexplore.ieee.org/document/8958134)                        | \                                                      |
 | Adversarial Mask: Real-World Universal Adversarial Attack on Face Recognition Model    | \        | 2021 | [paper](https://arxiv.org/pdf/2111.10759.pdf)                                | [code](https://github.com/alonzolfi/adversarialmask)                   |
 | Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition            | IJCAI    | 2021 | [paper](https://arxiv.org/abs/2105.03162)                                    | [code](https://github.com/TencentYoutuResearch/Adv-Makeup)|                                                      |
 | FACESEC: A Fine-grained Robustness Evaluation Framework for Face Recognition Systems   | CVPR     | 2021 | [paper](https://arxiv.org/pdf/2104.04107v1.pdf) | [code](https://github.com/KnowledgeDiscovery/FaceSec) |
+| Towards face encryption by generating adversarial identity masks                       | ICCV     | 2021 | [paper](https://arxiv.org/pdf/2003.06814v2.pdf) | [code](https://github.com/shawnxyang/tip-im) | 
 | Adversarial Sticker: A Stealthy Attack Method in the Physical World                    | TPAMI    | 2022 | [paper](https://ieeexplore.ieee.org/abstract/document/9779913)               | [code](https://github.com/jinyugy21/Adv-Stickers_RHDE) |
 | Adv-Attribute: Inconspicuous and Transferable Adversarial Attack on Face Recognition   | NeurIPS  | 2022 | [paper](https://arxiv.org/abs/2210.06871)                                    | \                                                      |
+| Protecting Facial Privacy: Generating Adversarial Identity Masks via Style-robust Makeup Transfer | CVPR | 2022 | [paper](https://arxiv.org/pdf/2203.03121v2.pdf) | [code](https://github.com/cgcl-codes/amt-gan) |
 | Towards Effective Adversarial Textured 3D Meshes on Physical Face Recognition          | CVPR     | 2023 | [paper](https://arxiv.org/pdf/2303.15818v1.pdf)                              | [code](https://github.com/thu-ml/at3d)                 |
 | Discrete Point-wise Attack Is Not Enough: Generalized Manifold Adversarial Attack for Face Recognition | CVPR | 2023 | [paper](https://arxiv.org/pdf/2301.06083v2.pdf)                  | [code](https://github.com/tokaka22/gmaa)               |
 
-# 2.2. 常用防御
 
-## 2.2.1 通用防御
+
+## 2.2. 主流防御方法
+
+### 2.2.1 通用防御
 
 | Name                                                                                                                  | Publish | Year | Paper                                                                                                                                                                           | Code                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------|---------|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -120,7 +126,10 @@
 | Removing Adversarial Noise in Class Activation Feature Space                                                          | CVPR    | 2021 | [paper](https://arxiv.org/pdf/2104.09197v1.pdf)                                                                                                                                 | [code](https://arxiv.org/pdf/2104.09197v1.pdf)                                                                              |
 | Person Re-identification Method Based on Color Attack and Joint Defence                                               | CVPR    | 2021 | [paper](https://arxiv.org/pdf/2111.09571v4.pdf)                                                                                                                                 | [code](https://github.com/finger-monkey/ReID_Adversarial_Defense)                                                           |
 | How to Robustify Black-Box ML Models? A Zeroth-Order Optimization Perspective                                         | ICLR    | 2022 | [paper](https://openreview.net/pdf?id=W9G_ImpHlQd)                                                                                                                              | [code](https://github.com/damon-demon/black-box-defense)                                                                    |
-## 2.2.2 针对人脸防御
+
+
+
+### 2.2.2 人脸防御
 | Name                                                                                        | Publish | Year | Paper                                                          | Code                                        |
 |---------------------------------------------------------------------------------------------|---------|------|----------------------------------------------------------------|---------------------------------------------|
 | Perturbation Inactivation Based Adversarial Defense for Face Recognition                    | TIFS    | 2022 | [paper](https://ieeexplore.ieee.org/abstract/document/9845464) | [code](https://github.com/renmin1991/perturbation-inactivate) |
@@ -130,10 +139,21 @@
 
 # 三. 攻防方案
 
-# 3.1. 防御模型
+* 涵盖内容
+
+1. 领域进展，主流方案，方案水平，Outlook
+
+2. Baseline选取，选取依据，方案水平，
+
+3. Benchmark，训练集，测试集，模型测试方案
+
+工作流规范
+
+## 3.1. 防御方案
+
 主要以人脸防御模型为主：灭火扰动，随机切片，对抗训练，去噪
 
-* 预选方案：
+### 3.1.1. 预选方案
 1. 自扰动训练检测
 2. 免疫空间灭火扰动
 3. 攻击检测
@@ -144,7 +164,7 @@
 | Perturbation Inactivation Based Adversarial Defense for Face Recognition                    | TIFS    | 2022 | [paper](https://ieeexplore.ieee.org/abstract/document/9845464) | [code](https://github.com/renmin1991/perturbation-inactivate) |
 | Attacks Meet Interpretability: Attribute-steered Detection of Adversarial Samples           | NeurIPS | 2018 | [paper](https://arxiv.org/pdf/1810.11580v1.pdf) | [code](https://github.com/AmIAttribute/AmI) |
 
-* 备选方案
+### 3.1.2. 备选方案
 1. 随机切片
 2. 黑盒攻击防御
 3. 特征去噪
@@ -158,7 +178,10 @@
 | MagNet: a Two-Pronged Defense against Adversarial Examples                                  | CCS     | 2017 | [paper](https://arxiv.org/pdf/1705.09064v2.pdf)                | [code1](https://github.com/Trevillie/MagNet)/[code2](https://github.com/GokulKarthik/MagNet.pytorch) |
 
 
-# 3.1. 预选攻击模型
+## 3.2. 测试方案
+
+### 3.2.1. 预选物理攻击
+
 主要使用物理攻击方式：贴纸，帽子攻击，化妆，3D面罩攻击等
 
 | Name                                                                                   | Publish  | Year | Paper                                                                        | Code                                                   |
@@ -169,70 +192,10 @@
 | Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition            | IJCAI    | 2021 | [paper](https://arxiv.org/abs/2105.03162)                                    | [code](https://github.com/TencentYoutuResearch/Adv-Makeup)|
 
 
+### 3.2.2. 预选数字攻击
 
+* 测试模型
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 一. 选型
-
-| Name                                                                                        | Publish | Year | Paper                                                          | Code                                        |
-|---------------------------------------------------------------------------------------------|---------|------|----------------------------------------------------------------|---------------------------------------------|
-| Detecting Adversarial Faces Using Only Real Face Self-Perturbations                    | IJCAI    | 2023 | [paper](https://arxiv.org/pdf/2304.11359v2.pdf) | [code](https://github.com/cc13qq/sapd) |
-
-# 二. 进展
-
-完成对抗样本数据集整理收集(八种基于对抗训练的)SPAD算法训练复现，目前准备测试模型。
-
-# 三. 测试方案
-测试模型:
-
-**ArcFace**
-
-目前选定八种对抗训练生成的攻击样本+两种基于GAN生成的攻击样本进行模型测试:
 1. BIM
 2. DIFGSM
 3. FGSM
